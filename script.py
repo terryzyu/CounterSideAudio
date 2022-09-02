@@ -3,7 +3,6 @@ import sys
 import win32gui, win32con
 import threading
 import tkinter
-hwnd = win32gui.FindWindow(None, 'CounterSide')
 
 isActive = False
 root = tkinter.Tk()
@@ -11,8 +10,11 @@ label = tkinter.Label(root, text="Not Running", fg="grey", font=("Helvetica", 16
 
 
 def keepActive():
-    while(isActive):
+    while(isActive): #Ya really gotta figure out a better way
+        hwnd = win32gui.FindWindow(None, 'CounterSide')
+        # print(hwnd)
         win32gui.SendMessage(hwnd, win32con.WM_ACTIVATE, win32con.WA_CLICKACTIVE, None)
+
 keepActiveThread = threading.Thread(target = keepActive)
 
 def switch():
@@ -21,7 +23,7 @@ def switch():
     # Determine is on or off
 
     isActive = not isActive
-    print(isActive)
+    #print(isActive)
     if isActive:
         label.config(text="Running",
                         fg="green")
