@@ -44,7 +44,7 @@ on_button = tkinter.Button(root, text="Turn On",  bd=0,
                    command=switch, bg="#90EE90")
 if __name__ == '__main__':
     root.title("CounterSide Keep Active")
-    w = 100
+    w = 250
     h = 120
     # get screen width and height
     ws = root.winfo_screenwidth() # width of the screen
