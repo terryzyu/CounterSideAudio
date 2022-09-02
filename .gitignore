@@ -3,3 +3,6 @@ build/
 *.xml
 *.zip
 *.toc
+.gitattributes
+CounterSide Background Audio.exe
+script.spec
