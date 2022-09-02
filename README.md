@@ -1,6 +1,7 @@
 # CounterSideAudio
 
 Code opens a window with a button to toggle
+
 Quick hack to send "fake" active window signal to CounterSide so audio keeps playing while in background.
 
 Not responsible if account gets banned for using this. 
